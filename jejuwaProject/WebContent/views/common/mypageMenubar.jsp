@@ -65,7 +65,7 @@
 		
 		/*.myPageAll{border: 1px solid red; position: relative; top: 100px;}*/
 		#myPageHead{margin: auto; margin-left: -20px; position: relative; top: 10px;}
-		.myPageBar{margin: auto; margin-left: 30px; border: 1px solid gray; width: 170px; height: 550px;}
+		.myPageBar{margin: auto; margin-left: 10px; border: 1px solid gray; width: 170px; height: 550px;}
 		
 		.userBox{
 		    font-size: 11px;
@@ -92,7 +92,7 @@
 </head>
 <body>
 
-	<%@ include file = "headerLogin.jsp" %>
+	<%@ include file = "../common/managerMenubar.jsp" %>
 	
 	 <div class="wrap">       
         <div class="content" >
@@ -155,20 +155,17 @@
                         
                 </div>
             </div>
-
+			
+			<br><br>
             <!-- 강동원님 반갑습니다 영역 -->
             <div class="content_2">
                 <div class="userBox">
                     <div class="userimg">
                         <span></span>
-                        <img src="../../resources/images/user.png" alt="user" id="userIcon">
+                        <img src="<%=request.getContextPath() %>/resources/images/user.png" alt="user" id="userIcon">
                     </div>
                     <p class="welcome" style="position: absolute; top: 12px;">
                         (사용자이름)님 반갑습니다.
                     </p>   
                 </div>
-            </div>
-		</div>
-    </div>
-</body>
-</html>
+        

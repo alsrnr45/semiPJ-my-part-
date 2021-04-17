@@ -29,7 +29,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="footer_wrap">
+	<div class="footer_wrap" style="width: 100%;">
         <footer id="footer" style="margin: 0px;">
             <div class="customer_center">
                 <div class="customer_center_left" style="margin-top:6px;">
@@ -43,15 +43,15 @@
                 <button type="button" class="btn btn-outline-warning"><a href="">자주하는 질문</a></button>
                 </div>
             </div>
-            <div id="footer" class="footer_wrap">
+            <div id="footer">
                 <div class="footer_service_support">
                     <ul class="footer_service_inf">
                         <li><a href="<%=request.getContextPath() %>/corpInt.cor">회사소개</a></li>
-                        <li><a href="">채용</a></li>
-                        <li><a href="">공고</a></li>
-                        <li><a href="">이용약관</a></li>
-                        <li><a href="">개인정보처리방침</a></li>
-                        <li><a href="">취소 및 환불정책</a></li>
+                        <li><a href="<%=request.getContextPath() %>/hire.cor">채용</a></li>
+                        <li><a href="<%=request.getContextPath() %>/announcement.cor">공고</a></li>
+                        <li><a href="<%=request.getContextPath()%>/terms.cor">이용약관</a></li>
+                        <li><a href="<%=request.getContextPath()%>/privacy.cor">개인정보처리방침</a></li>
+                        <li><a href="<%=request.getContextPath()%>/canRef.cor">취소 및 환불정책</a></li>
                     </ul>
                 </div>
                 <div class="corp_info_cs">
