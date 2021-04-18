@@ -5,14 +5,63 @@
 	<entry key="selectFaqList">
 		SELECT
 		        FAQ_NO
-		      , Q_CATEGORY
 		      , FAQ_TITLE
+		      , Q_CATEGORY
+		   FROM FAQ
+		  WHERE FAQ_STATUS = 'Y'
+	</entry>
+	
+	<entry key="selectFaqUserList">
+		SELECT
+		        FAQ_NO
+	          , FAQ_TITLE
+		      , Q_CATEGORY
+		      , FAQ_CONTENT
 		      		      
 		   FROM FAQ
 		  WHERE FAQ_STATUS = 'Y'
 	</entry>
 	
+	<entry key="insertFaq">
+		INSERT 
+		  INTO FAQ
+		     ( 
+		       FAQ_NO
+		     , Q_CATEGORY
+		     , FAQ_TITLE
+		     , FAQ_CONTENT
+		     )
+		 VALUES
+		     (
+		       SEQ_FNO.NEXTVAL
+		     , ?
+		     , ?
+		     , ?
+		     )
+	</entry>
 	
+	
+	
+	<entry key="selectFaq">
+		SELECT
+		        FAQ_NO
+		      , FAQ_TITLE
+		      , FAQ_CONTENT
+		      , Q_CATEGORY
+		   FROM FAQ
+		  WHERE FAQ_NO = ?
+		    AND FAQ_STATUS = 'Y'
+	</entry>
+	
+	<entry key="updateFaq">
+		UPDATE
+			   FAQ
+		   SET 
+		       Q_CATEGORY = ?, 
+		       FAQ_TITLE = ?, 
+		       FAQ_CONTENT = ?
+		 WHERE FAQ_NO = ? 
+	</entry>
 	
 </properties>
 

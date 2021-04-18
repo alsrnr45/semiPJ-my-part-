@@ -67,7 +67,7 @@
 
                 <!-- 로그인 전
                 	<ul id="info_1">
-                        <li><a href="">로그인</a></li>
+                        <li><a href="<%= contextPath %>/login.me">로그인</a></li>
                         <li><a href="">회원가입</a></li>
                     </ul>
                 -->
@@ -96,10 +96,10 @@
         <br clear=" both"> <br>
 
     <div class="navWrap" align="center">
-        <div class="menu"><a href="">투어/티켓</a></div>
+        <div class="menu"><a href="">투어</a></div>
         <div class="menu"><a href="">티켓</a></div>
         <div class="menu"><a href="">맛집</a></div>
-        <div class="menu"><a href="">고객센터</a></div>
+        <div class="menu"><a href="<%=contextPath%>/list.ufa">고객센터</a></div>
 
     
     </div>

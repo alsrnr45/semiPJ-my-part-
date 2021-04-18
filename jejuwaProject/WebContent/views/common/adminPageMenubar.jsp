@@ -22,6 +22,17 @@
     
 </head>
 <body>
+	<script>
+		var msg = "<%= session.getAttribute("alertMsg") %>"; // 알람창으로 출력할 메세지
+		// var msg = "메세지" / "null";
+		
+		if(msg != "null"){
+			alert(msg);
+			// 알람창 띄워준 후에 session에 담긴 메세지 지워야됨!!(안그러면 메뉴바 포함된 매 페이지 열때마다 alert계속뜰꺼임)
+			<% session.removeAttribute("alertMsg"); %>
+	}
+	</script>
+
 	<div class="wrap">
         <!-- 헤더 -->
         <div id="header" >
@@ -40,7 +51,7 @@
             <div id="header2">
                 <span class="topbtn">관리자on</span>
                 <a href="#" class=topbtn>로그아웃</a>
-                <a href="#" class=topbtn style="margin-left: 700px;">홈페이지</a>     
+                <a href="<%=contextPath %>" class=topbtn style="margin-left: 700px;">홈페이지</a>     
             </div>
             
         </div>
@@ -76,12 +87,7 @@
             <!-- 내용  -->
             <div class="content">
                 
-
-            
-   
-        
-    
-
+\
 
     <script>
         $(function(){
